@@ -1,7 +1,7 @@
 import type { BoxProps } from "@/Box/types";
-import React from "react";
 import { css } from "@styled-system/css";
 import { styled, Grid } from "@styled-system/jsx";
+import { useState } from "react";
 
 const styles = (isBorderless: boolean) =>
   css({
@@ -17,7 +17,7 @@ const styles = (isBorderless: boolean) =>
 
 export const Box: React.FC<BoxProps> = (props) => {
   const { style } = props;
-  const [isBorderless, setIsBorderless] = React.useState(false);
+  const [isBorderless, setIsBorderless] = useState(false);
 
   return (
     <Grid gridTemplateColumns={2} style={style}>
